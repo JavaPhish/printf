@@ -14,10 +14,12 @@ int format_spec(char fs, va_list params)
 		case 'd':
 			return (print_int(va_arg(params, int)));
 		break;
-/*
+
 		case 'c':
 			return (print_char(va_arg(params, char)));
 		break;
-*/
+		case '%':
+			_putchar('%');
+		break;
 	}
 }
