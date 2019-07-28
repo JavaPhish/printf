@@ -20,7 +20,7 @@ int format_spec(char fs, va_list params)
 			return (print_str(va_arg(params, char *)));
 		break;
 		case 'd':
-			return (print_int(va_arg(params, int)));
+			return (print_intdec(va_arg(params, int)));
 		break;
 
 		case 'c':
