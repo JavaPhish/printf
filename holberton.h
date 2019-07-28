@@ -8,7 +8,7 @@ int _putchar(char c);
 int format_spec(char fs, va_list params);
 int print_char(char c);
 int print_str(char *s);
-int print_int(int i);
+int print_intdec(int i);
 
 #endif
 
