@@ -4,6 +4,14 @@
 #include <unistd.h>
 #include "holberton.h"
 
+/**
+ * format_spec - Loops through all possible format specifiers and calls
+ * The corresponding function to print it
+ * @fs: The format specifer to be evaluated
+ * @params: The va_list from printf to print from
+ *
+ * Return: The number of bytes printed (0 if nothing)
+ */
 int format_spec(char fs, va_list params)
 {
 	switch (fs)
@@ -16,10 +24,12 @@ int format_spec(char fs, va_list params)
 		break;
 
 		case 'c':
-			return (print_char(va_arg(params, char)));
+			return (print_char(va_arg(params, int)));
 		break;
 		case '%':
-			_putchar('%');
+			return (_putchar('%'));
 		break;
 	}
+
+	return (0);
 }
