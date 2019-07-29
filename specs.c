@@ -46,8 +46,8 @@ int print_intdec(int n)
 			y = y * 10;
 			v = v / 10;
 		}
-		w = n;
-		for (; v > 0; z++)
+		v = n;
+		for (; y > 0; z++)
 		{
 			x = v / y;
 			_putchar(x + '0');

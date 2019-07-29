@@ -1,0 +1,29 @@
+.TH PRINTF
+.SH NAME
+printf \- produces outputs according to a format
+.SH SYNOPSIS
+.B printf
+\fIFORMAT\fR [\fIARGUMENT\fR]
+.B printf
+\fIOPTION\fR
+.SH DESCRIPTION
+.B printf
+produces output according to a format.
+.SH Format
+The format is a character string. It is made up of directives. The directives are oridinary characters; excluding the % character, which are copied to output stream and conversion specifications (man7.org). Conversion specification are precedded by the % character, ending with conversion specifier. 
+
+Arguements must correspond with the conversion specifier. Arguements used in the order given.  
+.SH Conversion specifiers
+Character specifies type of conversion to apply. Conversion specifiers are:
+.TP
+.BR \ d "," i \fR
+An int arguement converts to signed deciaml notation. Gives minimum number of digits that appear. 
+.TP
+.BR \ c \fR
+If no 1 modifier is present, int  argument converted to an unsigned character; resulting character printed. Output char type conversion specifier.
+.TP
+.BR \ s \fR
+Output string type conversion specifier. Chracters from the array are written up to, but not including, a terminating null byte. 
+.TP
+.BR \ % \fR
+A '%' is written.  No arguement is converted. Conversion specification is '%%'.
