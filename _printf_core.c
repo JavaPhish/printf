@@ -16,6 +16,9 @@ int _printf(const char *format, ...)
 	int loop, total_chars;
 	char *string;
 
+	if (!format)
+		return (-1);
+
 	va_start(args, format);
 
 	total_chars = 0;
