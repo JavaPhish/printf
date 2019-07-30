@@ -14,6 +14,9 @@ int main(void)
     unsigned int ui;
     void *addr;
     unsigned int m = 6;
+    char *str = "Test test test";
+
+
     len = _printf("Let's try to printf a simple sentence.\n");
     len2 = printf("Let's try to printf a simple sentence.\n");
     ui = (unsigned int)INT_MAX + 1024;
@@ -41,5 +44,6 @@ int main(void)
     _printf("Unknown:[%r]\n");
     printf("Unknown:[%r]\n");
     _printf("%u\n", m);
+    _printf("%r\n", str);
     return (0);
 }

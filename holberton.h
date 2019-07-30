@@ -10,5 +10,6 @@ int print_char(char c);
 int print_str(char *s);
 int print_intdec(int i);
 int print_unsigned(unsigned int n);
+void print_reverse(char *s);
 
 #endif

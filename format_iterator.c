@@ -33,6 +33,13 @@ int format_spec(char fs, va_list params)
 	        break;
 		case 'u':
 		  return (print_unsigned(va_arg(params, unsigned int)));
+		   break;
+		case 'r':
+
+		 
+		   (print_reverse(va_arg(params, char *)));
+		   return (0);
+		     
 		break;
 	}
 
