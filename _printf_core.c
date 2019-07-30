@@ -16,6 +16,9 @@ int _printf(const char *format, ...)
 	int loop, total_chars;
 	char *string;
 
+	if (!format)
+		return (-1);
+
 	va_start(args, format);
 
 	total_chars = 0;
@@ -30,11 +33,10 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-			_putchar(string[loop]);
+			total_chars = total_chars +  _putchar(string[loop]);
 		}
 		loop++;
 	}
-	total_chars = total_chars + loop;
 	va_end(args);
 
 	return (total_chars);

@@ -22,7 +22,9 @@ int format_spec(char fs, va_list params)
 		case 'd':
 			return (print_intdec(va_arg(params, int)));
 		break;
-
+		case 'i':
+			return (print_intdec(va_arg(params, int)));
+		break;
 		case 'c':
 			return (print_char(va_arg(params, int)));
 		break;

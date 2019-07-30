@@ -1,13 +1,24 @@
 #include "holberton.h"
 #include <unistd.h>
 
+/**
+ * print_char - Prints one char
+ * @c: The char to print
+ *
+ * Return: the value of char
+ */
 int print_char(char c)
 {
-	return(write(1, &c, 1));
+	return (write(1, &c, sizeof(c)));
 }
 
-
- int print_str(char *str)
+/**
+ * print_str - Prints a full string to console
+ * @str: The string to print
+ *
+ * Return: The return value
+ */
+int print_str(char *str)
 {
 	int i;
 	int x = 0;
@@ -19,6 +30,12 @@ int print_char(char c)
 			return (x);
 }
 
+/**
+ * print_intdec - prints an int
+ * @n: The int to print
+ *
+ * Return: Amount printed
+ */
 int print_intdec(int n)
 {
 

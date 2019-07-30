@@ -1,29 +1,44 @@
-.TH PRINTF
+.\" Manpage for nuseradd.
+.\" Contact vivek@nixcraft.net.in to correct errors or typos.
+.TH _printf "29 July 2019" "1.0" "printf man page"
 .SH NAME
-printf \- produces outputs according to a format
+_printf- Produces formatted output
 .SH SYNOPSIS
-.B printf
-\fIFORMAT\fR [\fIARGUMENT\fR]
-.B printf
-\fIOPTION\fR
+.B printf (\fIconst\fR \fIchar\fR \fI*format\fR, \fI...\fR);
+.PP
+.B #include 'holberton.h'
+.PP
+.B #include <unistd.h>
+.PP
+.B #include <stdlib.h>
+.PP
+.B #include <stdarg.h>
+.PP
+.B #include <stdio.h>
+.PP
 .SH DESCRIPTION
-.B printf
-produces output according to a format.
-.SH Format
-The format is a character string. It is made up of directives. The directives are oridinary characters; excluding the % character, which are copied to output stream and conversion specifications (man7.org). Conversion specification are precedded by the % character, ending with conversion specifier. 
-
-Arguements must correspond with the conversion specifier. Arguements used in the order given.  
-.SH Conversion specifiers
-Character specifies type of conversion to apply. Conversion specifiers are:
+printf is a command that prints outputs according to specific formats.
+.SH RETURN VALUE
+Upon success, printf returns the number of characters printed, excluding NULL, which is used to end output to strings.
+.SH Conversion Specifiers
+Characters that designate the type of conversion to be applied.
 .TP
-.BR \ d "," i \fR
-An int arguement converts to signed deciaml notation. Gives minimum number of digits that appear. 
+.B -c
+.R The int argument is converted to an unsigned char.
 .TP
-.BR \ c \fR
-If no 1 modifier is present, int  argument converted to an unsigned character; resulting character printed. Output char type conversion specifier.
+.B -s
+.R const char* argument is a pointer to an array of character types (pointer to a string). Characters from the array are written up to (but not i\
+ncluding) a terminating null byte. If a precision is specified no null byte need be present. If the precision is not specified, or is greater tha\
+n the size of the array, the array must contain a terminating null byte.
 .TP
-.BR \ s \fR
-Output string type conversion specifier. Chracters from the array are written up to, but not including, a terminating null byte. 
+.B -d, i
+.R The int argument is converted to signed decimal notation. The precision, if any, gives the minimum number of digits that must appear
 .TP
-.BR \ % \fR
-A '%' is written.  No arguement is converted. Conversion specification is '%%'.
+.B -%
+.R The '%' is written. No argument is converted. The complete conversion specification is '%%'.
+.SH SEE ALSO
+printf(3)
+.SH BUGS
+.R No known bugs at this point in time.
+.SH AUTHOR
+Carter Clements (831@holbertonschool.com) and Faizan Khan (711@holbertonschool.com)
