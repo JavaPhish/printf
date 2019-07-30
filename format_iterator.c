@@ -30,6 +30,9 @@ int format_spec(char fs, va_list params)
 		break;
 		case '%':
 			return (_putchar('%'));
+	        break;
+		case 'u':
+		  return (print_unsigned(va_arg(params, unsigned int)));
 		break;
 	}
 

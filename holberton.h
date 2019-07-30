@@ -9,6 +9,6 @@ int format_spec(char fs, va_list params);
 int print_char(char c);
 int print_str(char *s);
 int print_intdec(int i);
+int print_unsigned(unsigned int n);
 
 #endif
-
