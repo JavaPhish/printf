@@ -2,9 +2,9 @@
 
 ## Project details
 
-Create a version of printf consistent with Holberton School standards. `prinf` 
+Create a version of printf consistent with Holberton School standards. `prinf`
 
-## Function prototype 
+## Function prototype
 
 ```
 int _printf(const char *format, ...);
@@ -26,9 +26,10 @@ This is a  ```printf```, created by Holberton School for students. The motivatio
 
 
 ## Examples
-**Character:**  ```
-			_printf("%c", 'x');
-				      ```
+**Character:**
+ ```
+_printf("%c", 'x');
+ ```
 **Output:** x
 
 **String:** ```
@@ -64,4 +65,6 @@ gcc -Wall -Wextra -Werror -pedantic -Wno-format *.c
 ## Authors
 
 [Faizan Khan ](https://github.com/b1naryp0et):basketball:
+
+
 [Carter Clements](https://github.com/JavaPhish) :gift:
