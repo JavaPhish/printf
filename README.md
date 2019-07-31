@@ -32,19 +32,22 @@ _printf("%c", 'x');
  ```
 **Output:** x
 
-**String:** ```
-	        _printf("%s", 'Hello, Holberton!');
-		    ```
+**String:**
+ ```
+_printf("%s", 'Hello, Holberton!');
+ ```
 **Output:** Hello, Holberton!
 
-**Decimal Integer:**  ```
-	        _printf("%i", 7);
-		      ```
+**Decimal Integer:**
+ ```
+_printf("%i", 7);
+ ```
 **Output:** 7
 
-**Decimal Integer:**  ```
-	        _printf("%d", 9);
-		      ```
+**Decimal Integer:**
+ ```
+_printf("%d", 9);
+ ```
 **Output:** 9
 
 ## Tasks
