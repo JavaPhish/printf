@@ -1,5 +1,4 @@
-.\" Manpage for nuseradd.
-.\" Contact vivek@nixcraft.net.in to correct errors or typos.
+.\" Manpage for printf.
 .TH _printf "29 July 2019" "1.0" "printf man page"
 .SH NAME
 _printf- Produces formatted output
@@ -23,22 +22,22 @@ Upon success, printf returns the number of characters printed, excluding NULL, w
 .SH Conversion Specifiers
 Characters that designate the type of conversion to be applied.
 .TP
-.B -c
+.B c
 .R The int argument is converted to an unsigned char.
 .TP
-.B -s
+.B s
 .R const char* argument is a pointer to an array of character types (pointer to a string). Characters from the array are written up to (but not i\
 ncluding) a terminating null byte. If a precision is specified no null byte need be present. If the precision is not specified, or is greater tha\
 n the size of the array, the array must contain a terminating null byte.
 .TP
-.B -d, i
+.B d, i
 .R The int argument is converted to signed decimal notation. The precision, if any, gives the minimum number of digits that must appear
 .TP
-.B -%
+.B %
 .R The '%' is written. No argument is converted. The complete conversion specification is '%%'.
 .SH SEE ALSO
 printf(3)
 .SH BUGS
 .R No known bugs at this point in time.
-.SH AUTHOR
+.SH AUTHORS
 Carter Clements (831@holbertonschool.com) and Faizan Khan (711@holbertonschool.com)
